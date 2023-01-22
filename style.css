@@ -91,12 +91,44 @@ html {
 
 .columns {
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 2fr 1fr;
   column-gap: 60px;
 }
 
 .skills__item {
   display: inline-block;
+}
+
+.skills__item::after {
+  content: '·';
+  padding-inline: 5px;
+}
+
+.skills__item:last-of-type::after {
+  content: '';
+  padding-inline: 0px;
+}
+
+
+.institute__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.institute__description::before {
+  content: '‣';
+  padding-inline-end: 5px;
+}
+
+.span_skill {
+  font-weight: 700;
+}
+
+.contact-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .links__list {
@@ -133,6 +165,10 @@ html {
 }
 
 @media print {
+  .header {
+    padding-block-end: 0px;
+  }
+
   .links__print {
     display: block;
   }
@@ -142,6 +178,7 @@ html {
   }
 
   .links__name {
+    width: 100%;
     font-weight: 700;
   }
 
