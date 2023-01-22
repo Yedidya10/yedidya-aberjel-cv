@@ -25,6 +25,7 @@ html {
 
 .header {
   margin: auto;
+  padding-inline: 20px;
   max-width: 980px;
   padding-block-end: 40px;
 }
@@ -34,7 +35,7 @@ html {
 }
 
 .h2 {
-  border-block-end: solid 2px rgba(100, 100, 100, 1);
+  border-block-end: solid 1px rgba(100, 100, 100, 1);
 }
 
 .section {
@@ -57,7 +58,8 @@ html {
 
 .main {
   margin: auto;
-  max-width: 980px;
+  padding-inline: 20px;
+  max-width: 1020px;
 }
 
 .list {
@@ -162,6 +164,13 @@ html {
 
 .links__print {
   display: none;
+}
+
+
+@media screen and (450px > width) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media print {
