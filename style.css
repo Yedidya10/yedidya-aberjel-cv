@@ -1,0 +1,159 @@
+@page {
+  width: 21cm;
+  height: 29.7cm;
+
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  padding-block-start: 60px;
+  margin: auto;
+}
+
+.header {
+  margin: auto;
+  max-width: 980px;
+  padding-block-end: 40px;
+}
+
+.h1 {
+  line-height: 1;
+}
+
+.h2 {
+  border-block-end: solid 2px rgba(100, 100, 100, 1);
+}
+
+.section {
+  padding-block-end: 30px;
+  width: 100%;
+}
+
+.profession-name {
+  font-size: 1.2rem;
+  padding-block-end: 15px;
+}
+
+.line {
+  position: absolute;
+  inset-inline-start: 0px;
+  width: 430px;
+  height: 5px;
+  background-color: rgba(100, 100, 100, 1);
+}
+
+.main {
+  margin: auto;
+  max-width: 980px;
+}
+
+.list {
+  list-style: none;
+  padding-block: 10px;
+}
+
+.link {
+  color: initial;
+  text-decoration: none;
+}
+
+.link:visited,
+.link:active {
+  text-decoration: none;
+  color: initial;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.about-me {
+  padding-inline: 10px;
+  padding-block-end: 40px;
+}
+
+.about-me__story {
+  font-size: 1.1rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  column-gap: 60px;
+}
+
+.skills__item {
+  display: inline-block;
+}
+
+.links__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+
+.icon_github:hover {
+  fill: #24292f;
+}
+
+.icon_linkedin:hover {
+  fill: #0a66c2;
+}
+
+.links__print {
+  display: none;
+}
+
+@media print {
+  .links__print {
+    display: block;
+  }
+
+  .links__list {
+    gap: 20px;
+  }
+
+  .links__name {
+    font-weight: 700;
+  }
+
+  .links__item {
+    gap: 0px;
+  }
+
+  .icon_github {
+    display: none;
+  }
+
+  .icon_linkedin {
+    display: none;
+  }
+}
