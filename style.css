@@ -56,6 +56,11 @@ html {
   font-size: 1.3rem;
 }
 
+.contact-info__title {
+  font-size: .9rem;
+  border: none;
+}
+
 .line {
   width: 80px;
   height: 5px;
@@ -140,8 +145,8 @@ html {
   padding-inline: 0px;
 }
 
-.contact-info .paragraph {
-  line-height: 1.5;
+.contact-info {
+  margin-block-end: .35rem;
 }
 
 .institute__info-list {
