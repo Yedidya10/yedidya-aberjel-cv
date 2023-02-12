@@ -22,17 +22,30 @@ html {
   align-items: flex-start;
 }
 
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
 .h1 {
   line-height: 1;
 }
 
 .h2 {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
   border-block-end: solid 1px rgba(100, 100, 100, 1);
 }
 
 .h3 {
   font-size: 1.15rem;
+}
+
+.paragraph {
+  min-width: fit-content;
+  line-height: 1.5;
 }
 
 .paragraph, .item {
@@ -41,13 +54,12 @@ html {
 
 .profession-name {
   font-size: 1.3rem;
-  padding-block-end: 15px;
 }
 
 .line {
-  inset-inline-start: 0px;
-  width: 100px;
-  height: 6px;
+  width: 80px;
+  height: 5px;
+  margin-block-start: 1rem;
   background-color: rgba(100, 100, 100, 1);
 }
 
@@ -71,12 +83,16 @@ html {
 }
 
 .about-me {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 8px;
   padding-inline: 10px;
-  padding-block: 50px;
+  padding-block: 30px;
 }
 
 .about-me__story {
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .columns {
@@ -91,6 +107,12 @@ html {
   gap: 30px;
 }
 
+.projects__list {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+}
+
 .projects__item-h3{
   display: flex;
   align-items: baseline;
@@ -101,6 +123,7 @@ html {
   display: none;
   font-size: .9rem;
   font-weight: 400;
+  text-decoration: underline;
 }
 
 .skills__item {
@@ -115,6 +138,10 @@ html {
 .skills__item:last-of-type::after {
   content: '';
   padding-inline: 0px;
+}
+
+.contact-info .paragraph {
+  line-height: 1.5;
 }
 
 .institute__info-list {
@@ -189,7 +216,7 @@ html {
   }
 
   .about-me {
-    padding-block-start: 30px;
+    width: 95%;
   }
 
   .projects__item-link {
